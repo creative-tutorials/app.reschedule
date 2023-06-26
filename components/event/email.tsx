@@ -5,7 +5,7 @@ export default function EmailInput({ evt, setFormData, formData }: any) {
       placeholder="reschedulelabs@hivemi.com"
       autoComplete="off"
       id={evt.email}
-      onKeyUp={(e) => setFormData({ ...formData, email: e.target.value })}
+      onKeyUp={(e:any) => setFormData({ ...formData, email: e.target.value })}
     />
   );
 }

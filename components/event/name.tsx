@@ -4,7 +4,7 @@ export default function NameInput({ setFormData, formData }: any) {
       type="text"
       placeholder="The launching of reschedule"
       autoComplete="off"
-      onKeyUp={(e) => setFormData({ ...formData, name: e.target.value })}
+      onKeyUp={(e:any) => setFormData({ ...formData, name: e.target.value })}
     />
   );
 }
