@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 
-export default function Header(props) {
+export default function Header(props: { styles: any; setIsGrabMenu: (arg0: boolean) => void; }) {
   return (
     <div className={props.styles.header}>
       <div className={props.styles.colLeft}>
