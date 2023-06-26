@@ -1,38 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+---
+description: Reschedule Labs official documentation
+---
 
-## Getting Started
+# README
 
-First, run the development server:
+## Reschedule Labs
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Service Documentation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Introduction
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Welcome to the documentation for our event planning and scheduling service. This document provides an overview of the key features, functionalities, and guidelines related to our service. Whether you are an event planner, organizer, or user of our service, this documentation will help you understand and utilize our platform effectively.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Versions
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Current Version: 0.0.1**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Our service is regularly updated and improved to meet the evolving needs of our users. We maintain a versioning system to keep track of updates, bug fixes, and new features. Please refer to the release notes and update documentation for information on each version's changes and enhancements.
 
-## Learn More
+### Security
 
-To learn more about Next.js, take a look at the following resources:
+We prioritize the security and privacy of our users' data. Our service is built with robust security measures to protect your information. We employ industry-standard encryption protocols, access controls, and secure server configurations to safeguard data integrity and confidentiality. For more detailed information on our security practices, please refer to our security documentation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We understand that each event planner has unique requirements. Our service offers customization options to tailor the platform to your specific needs. You can personalize the user interface, configure event types, set availability, and customize email templates. Refer to the customization guide for step-by-step instructions on customizing the service to match your branding and preferences.
 
-## Deploy on Vercel
+### Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Integrating our service into your website is a seamless process. Our installation guide provides comprehensive instructions on how to install the app extension, configure settings, and ensure proper functionality. Follow the step-by-step guide to successfully install and set up the service within your website environment.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Contributing
+
+We welcome contributions from the community to enhance our service. If you have suggestions, bug fixes, or new features to propose, please refer to our contributing guide. It outlines the process for submitting contributions, providing code changes, and collaborating with our development team. We appreciate your input and look forward to your contributions.
+
+### Code of Conduct
+
+We strive to maintain a positive and inclusive community around our service. Our code of conduct sets clear guidelines for respectful and collaborative interactions among users, contributors, and the development team. By participating in our community, you agree to abide by the code of conduct and contribute to a supportive environment for all.
+
+### Contact
+
+If you have any questions, or concerns, or need assistance, please don't hesitate to reach out to our support team. You can contact us through our website, email, or phone. We are dedicated to providing timely and helpful support to ensure your experience with our service is smooth and successful.
+
+Thank you for choosing our event planning and scheduling service. We are excited to support you in creating memorable events and streamlining your scheduling processes.
+
+Best regards,\
+<mark style="color:purple;">Reschedule OpenLab</mark>
