@@ -90,6 +90,8 @@ export default function CreateEventPage() {
   }, [counter, isLoaded, isSignedIn]);
 
   const devAPI = process.env.NEXT_PUBLIC_DEV_API;
+  const prodAPI = process.env.NEXT_PUBLIC_PROD_API;
+
   const [toastProps, setToastProps] = useState({
     content: "",
     isHidden: true,
@@ -104,7 +106,7 @@ export default function CreateEventPage() {
     });
 
     axios
-      .post(`${devAPI}/user/${formData.id}/create/event`, {
+      .post(`${prodAPI}/user/${formData.id}/create/event`, {
         username: formData.username,
         name: formData.name,
         sender: formData.sender,
