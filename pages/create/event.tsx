@@ -9,11 +9,13 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import Header from "../../components/Header/header";
 import EventWrapper from "@/components/event/event_wrapper";
 import ToastNotification from "@/components/event/toast";
+import GrabMenu from "@/components/menu/grabMenu";
 import axios from "axios";
 import { useUser } from "@clerk/nextjs";
 
 export default function CreateEventPage() {
   const { isLoaded, isSignedIn, user } = useUser();
+  const [isGrabMenu, setIsGrabMenu] = useState(false);
   const router = useRouter();
   const [counter, setCounter] = useState(0);
   const [formData, setFormData] = useState({
@@ -170,7 +172,7 @@ export default function CreateEventPage() {
         <link rel="manifest" href="/icon/site.webmanifest" />
       </Head>
       <div className={evt.container}>
-        <Header styles={styles} />
+        <Header styles={styles} setIsGrabMenu={setIsGrabMenu} />
 
         <div className={evt.header}>
           <p className={evt.title}>Create New Event</p>
@@ -184,6 +186,13 @@ export default function CreateEventPage() {
           />
         </Suspense>
         <ToastNotification evt={evt} toastProps={toastProps} />
+        <Suspense fallback={<p>Loading...</p>}>
+          <GrabMenu
+            styles={styles}
+            isGrabMenu={isGrabMenu}
+            setIsGrabMenu={setIsGrabMenu}
+          />
+        </Suspense>
       </div>
     </>
   );

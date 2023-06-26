@@ -134,9 +134,11 @@
 }
 .rows span {
   font-size: 0.8rem;
-  /* white-space: nowrap; */
 }
-@media screen and (max-width: 506px) {
+.menu {
+  display: none;
+}
+/* @media screen and (max-width: 506px) {
   .events {
     display: flex;
     justify-content: space-between;
@@ -151,5 +153,62 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+} */
+.grbMenu {
+  display: none;
+}
+@media screen and (max-width: 609px) {
+  .events {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .cri {
+    width: 100%;
+  }
+  .cri #button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Links {
+    display: none;
+  }
+  .gbBtn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .grbMenu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #CBD5E1;
+    top: 0;
+    z-index: 3;
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  .grbMenu#active {
+    top: 0;
+  }
+  .grbCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 100vh;
+  }
+  .grbCenter a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #0D1826;
+  }
+  .menu {
+    display: flex;
   }
 }

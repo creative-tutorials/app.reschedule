@@ -3,15 +3,18 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 
 const Header = lazy(() => import("../components/Header/header"));
 
 import EventTable from "@/components/event/table";
+import GrabMenu from "@/components/menu/grabMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [isGrabMenu, setIsGrabMenu] = useState(false);
+
   return (
     <>
       <Head>
@@ -39,7 +42,7 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <Suspense fallback={<p>Loading...</p>}>
-          <Header styles={styles} />
+          <Header styles={styles} setIsGrabMenu={setIsGrabMenu} />
         </Suspense>
         <div className={styles.wrapper}>
           <div className={styles.tabs}>
@@ -85,6 +88,13 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Suspense fallback={<p>Loading...</p>}>
+          <GrabMenu
+            styles={styles}
+            isGrabMenu={isGrabMenu}
+            setIsGrabMenu={setIsGrabMenu}
+          />
+        </Suspense>
       </div>
     </>
   );
