@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import EventSelect from "./evselect";
 import Meet from "./meet";
 import NameInput from "./name";
@@ -11,24 +11,55 @@ export default function EventWrapper({
   formData,
   createNewEvent,
 }: any) {
-  const convertStringToDateTime = (e: { target: { value: any; }; }) => {
-    const dateString = e.target.value;
-    const dateTimeParts = dateString.split("T");
-    const dateParts = dateTimeParts[0].split("-");
-    const timeParts = dateTimeParts[1].split(":");
+  const [dateTimeValue, setDateTimeValue] = useState("");
+  const handleInputChange = (event: { target: { value: any; }; }) => {
+    const inputDate = event.target.value;
+    const dateObj = new Date(inputDate);
+    const formattedDateTime = `${getDayOfWeek(dateObj)}, ${getMonthName(
+      dateObj
+    )} ${dateObj.getDate()}, ${formatTime(dateObj)}`;
 
-    const year = parseInt(dateParts[0], 10);
-    const month = parseInt(dateParts[1], 10);
-    const day = parseInt(dateParts[2], 10);
-    const hours = parseInt(timeParts[0], 10);
-    const minutes = parseInt(timeParts[1], 10);
+    setDateTimeValue(inputDate);
+    setFormData({ ...formData, dateTime: formattedDateTime });
+  };
 
-    const dateTime = new Date(year, month - 1, day, hours, minutes);
+  const getDayOfWeek = (date: Date) => {
+    const daysOfWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    return daysOfWeek[date.getDay()];
+  };
 
+  const getMonthName = (date: Date) => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    return months[date.getMonth()];
+  };
 
-    setFormData({ ...formData, dateTime: dateTime });
-
-    return dateTime;
+  const formatTime = (date: Date) => {
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+    const formattedHour = hour < 10 ? `0${hour}` : hour;
+    const formattedMinute = minute < 10 ? `0${minute}` : minute;
+    return `${formattedHour}:${formattedMinute}`;
   };
 
   return (
@@ -76,7 +107,7 @@ export default function EventWrapper({
               type="datetime-local"
               name=""
               id=""
-              onChange={convertStringToDateTime}
+              onChange={handleInputChange}
             />
           </Suspense>
           <p>

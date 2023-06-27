@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Head>
         <title>Reschedule</title>
-        <meta name="description" content="Match meet and reschedule events" />
+        <meta name="description" content="Reschedule - Match meet and reschedule events" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="apple-touch-icon"

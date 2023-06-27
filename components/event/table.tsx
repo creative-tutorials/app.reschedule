@@ -22,7 +22,7 @@ export default function EventTable(props: any) {
   async function fetchEvents(userid: string | undefined) {
     setIsFetching(true);
     axios
-      .get(`${prodAPI}/query/${userid}/events`)
+      .get(`${devAPI}/query/${userid}/events`)
       .then(function (response) {
         SetpoData(response.data);
         setIsFetching(false);

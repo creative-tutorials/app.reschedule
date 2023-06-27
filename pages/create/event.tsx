@@ -108,7 +108,7 @@ export default function CreateEventPage() {
     });
 
     axios
-      .post(`${prodAPI}/user/${formData.id}/create/event`, {
+      .post(`${devAPI}/user/${formData.id}/create/event`, {
         username: formData.username,
         name: formData.name,
         sender: formData.sender,
