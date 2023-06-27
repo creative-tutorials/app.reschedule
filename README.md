@@ -4,7 +4,7 @@ description: Reschedule Labs official documentation
 
 # README
 
-<figure><img src=".gitbook/assets/GitHub Banner.png" alt="reschedule labs" width="563"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/GitHub Banner (1).png" alt="reschedule labs"><figcaption></figcaption></figure>
 
 ## README
 
